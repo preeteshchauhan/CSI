@@ -1,9 +1,27 @@
+
+.baap{
+  background-color: #FEF9E7;
+}
+header{
+  margin: 20px 10px 60px 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#main-button{
+  margin-left: 900px;
+}
 .container{
+    margin: 0;
     width: 100%;
 }
 .img-container{
     width: 100%;
     display: flex; 
+}
+.img-container.img{
+  border-radius: 50x;
+  height: 300px;
 }
   
 .wallet-container{
@@ -16,7 +34,7 @@
     list-style: none;
     padding: 0;
     border: 1px solid #ccc;
-    width: 300px;
+    width: 450px;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -64,10 +82,6 @@
     display: flex;  
     border-radius: 10px;
 }
-.text-container .text{
-}
-.text-container .bitcoin{
-}
 header{
      display: inline-flex;
 }
@@ -76,7 +90,7 @@ header button{
 }
 
 .transaction{
-    margin-left: 50px;
+    margin-left: 230px;
     align-self: flex-start;
   }
   
@@ -98,7 +112,8 @@ header button{
     font-family: Arial, sans-serif;
 }
   .crypto-name {
-    margin: 0;
+    font-size: 20px;
+    margin: 3px;
   }
   
   .crypto-release {
@@ -156,3 +171,38 @@ header button{
     border-bottom: none;
   }
   
+  #see{
+    background-color: #007bff;
+  }
+  #see:hover{
+    background-color: #0056b3;
+}
+.text-container {
+  width: 100%;
+  display: flex; 
+}
+.card {
+  align-self: flex-start;
+  margin-top:50px; /* Set the margin to 0 */
+  padding: 0;
+  width: 700px;
+  border: 1px solid #ccc;
+}
+#converter {
+  margin: 50px 0px 0px 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  padding: none;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: black;
+  color: #ccc;
+  width: 500px;
+  height: 350px;
+}
+.card-header{
+  margin-top: 20px;
+}

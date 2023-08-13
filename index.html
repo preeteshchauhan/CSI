@@ -6,17 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>CSi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/40a53d48d8.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </head>
 
 <body>
+    <div class="baap">
     <header>
         <h1>Overview</h1>
+        <a href="#" id="main-button" class="btn btn-primary"><i class="fa-solid fa-file"></i> Download Report</a>
     </header>
     <div class="container">
         <div class="img-container">
             <div class="img">
-                <img src="images\images.jpeg" alt="cat image" height="250px">
+                <img src="https://picsum.photos/200" alt="random image" style="border-radius: 50px; height:300px">
             </div>
             <div class="wallet-container">
                 <ul class="wallet-list">
@@ -35,13 +40,15 @@
                     <li class="wallet-item heading">
                         Transactions
                         <div class="dropdown">
-                          <button class="dropdown-button">See all▼</button>
-                          <div class="dropdown-content">
-                            <p>onepeice</p>
-                            <p>naruto</p>
-                            <p>bleach</p>
+                            <button id="see" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false  ">
+                              See all
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
                           </div>
-                        </div>
                       </li>
                     <li class="transaction-item"><span><i class="fa-brands fa-bitcoin"></i></span>
                         <div class="crypto-details">
@@ -71,15 +78,38 @@
 
         </div>
         <div class="text-container">
-            <div class="text">
-                <h2>text</h2>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">CSI Website</h5>
+                    <h6>Task</h6>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content. anvjksn vfvd vdbd bfgbfgbghbfgbfnd gghnhngnfnfhhfgbfgb fg bf fbfggjcnkdjvnskvnkk</p>
+                    <a href="#" class="btn btn-primary"><i class="fa-solid fa-file"></i> Learn more</a>
+                </div>
             </div>
-            <div class="bitcoin">
-                <h2>bitcoin</h2>
+              <div id="converter">
+                <div class="card-header">
+                    <i class="fa-brands fa-bitcoin"></i> <span>  </span><i class="fa-solid fa-indian-rupee-sign"></i>
+                  </div>
+                    <br>
+                <input type="number" id="bitcoin" step="any" placeholder="Bitcoin/INR" required>
+                <br><br>
+                <label for="currency">Convert to:</label> <br>
+                <select id="currency">
+                    <option value="inr">INR (Indian Rupees)</option>
+                    <option value="bitcoin">Bitcoin</option>
+                </select>
+                <br><br>
+                <button type="button" class="btn btn-primary" onclick="convertCurrency()">Convert</button>
+                <br><br>
+                <p id="result"></p>
             </div>
         </div>
 
     </div>
+    <footer>
+        <h1>HELOOOO</h1>
+    </footer>
+</div>
 </body>
 
 </html>
