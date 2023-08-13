@@ -5,7 +5,9 @@ function convertCurrency() {
     let convertedAmount = 0;
     let resultText = "";
 
-    if (selectedCurrency === 'inr') {
+    if (isNaN(bitcoinInput)) {
+        resultText = "Please provide a valid input.";
+    } else if (selectedCurrency === 'inr') {
         convertedAmount = bitcoinInput * 5000000; // Assuming 1 Bitcoin = 5,000,000 INR
         resultText = `${bitcoinInput} Bitcoin is approximately ${convertedAmount} INR.`;
     } else if (selectedCurrency === 'bitcoin') {
@@ -17,18 +19,30 @@ function convertCurrency() {
 }
 
 
-document.getElementById('main-button').addEventListener('click', function() {
-    // Replace 'path_to_your_report.pdf' with the actual path to your report file
-    const reportPath = 'csi.pdf';
+function swapInputs() {
+    var input1 = document.getElementById('input1');
+    var input2 = document.getElementById('input2');
     
-    const a = document.createElement('a');
-    a.href = reportPath;
-    a.download = 'csi.pdf';
-    a.style.display = 'none';
+    var temp = input1.value;
+    input1.value = input2.value;
+    input2.value = temp;
+  }
+  
+  function addNewRow() {
+    const walletList = document.querySelector('.wallet-list');
+    const newRow = document.createElement('li');
+    newRow.classList.add('wallet-item');
     
-    document.body.appendChild(a);
+    const inputField = document.createElement('input');
+    inputField.type = 'text';
+    inputField.placeholder = 'Crypto Name';
     
-    a.click();
+    const priceField = document.createElement('input');
+    priceField.type = 'text';
+    priceField.placeholder = 'Crypto Price';
     
-    document.body.removeChild(a);
-});
+    newRow.appendChild(inputField);
+    newRow.appendChild(priceField);
+    
+    walletList.insertBefore(newRow, walletList.lastElementChild);
+  }
