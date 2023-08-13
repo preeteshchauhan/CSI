@@ -85,9 +85,6 @@ header{
 header{
      display: inline-flex;
 }
-header button{
-    
-}
 
 .transaction{
     margin-left: 230px;
@@ -201,8 +198,70 @@ header button{
   background-color: black;
   color: #ccc;
   width: 500px;
-  height: 350px;
+  height: 360px;
 }
 .card-header{
   margin-top: 20px;
+}
+
+/* Existing CSS code */
+
+/* Add media queries for tablet and mobile responsiveness */
+@media (max-width: 768px) {
+  /* Adjust header */
+  header {
+    margin: 20px 10px 30px 10px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #main-button {
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+
+  /* Adjust .img-container */
+  .img-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img-container.img {
+    height: 200px;
+  }
+
+  /* Adjust .wallet-container */
+  .wallet-container {
+    margin: 20px 10px;
+    align-self: center;
+  }
+
+  .wallet-list {
+    width: 100%;
+  }
+
+  /* Adjust .transaction */
+  .transaction {
+    margin: 20px 10px;
+    align-self: center;
+  }
+
+  .transaction-list {
+    width: 100%;
+  }
+
+  /* Adjust .text-container */
+  .text-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  #converter {
+    margin: 20px 10px;
+    width: 90%;
+  }
 }

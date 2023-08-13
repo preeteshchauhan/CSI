@@ -15,3 +15,20 @@ function convertCurrency() {
 
     document.getElementById('result').innerText = resultText;
 }
+
+
+document.getElementById('main-button').addEventListener('click', function() {
+    // Replace 'path_to_your_report.pdf' with the actual path to your report file
+    const reportPath = 'csi.pdf';
+    
+    const a = document.createElement('a');
+    a.href = reportPath;
+    a.download = 'csi.pdf';
+    a.style.display = 'none';
+    
+    document.body.appendChild(a);
+    
+    a.click();
+    
+    document.body.removeChild(a);
+});
